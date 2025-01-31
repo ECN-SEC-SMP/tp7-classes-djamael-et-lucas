@@ -5,6 +5,7 @@
 
 void partie1(void);
 void partie2(void);
+void partie3(void);
 
 
 
