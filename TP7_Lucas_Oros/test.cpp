@@ -12,6 +12,17 @@
 using namespace std;
 
 
+// Surcharge de l'opérateur pour cout (externe a la classe)
+ostream& operator<<(ostream &out,point &p) {
+    out << "(" << p.get_x() << ", " << p.get_y() << ")";
+    return out;
+}
+
+
+
+
+
+
 void partie1(void) {
     point p1(1, 2);
     point p2(3, 4);
@@ -29,3 +40,14 @@ void partie1(void) {
     p2.afficher();
     p3.afficher();
 }
+
+void partie2(void){
+    point p1(2, 3);
+    point p2(5, 8);
+
+    cout << "Point 1 : " << p1 << endl;
+    cout << "Point 2 : " << p2 << endl;
+
+    p1 += p2;
+    cout << "Point 1 apres translation : " << p1 << endl;
+};
