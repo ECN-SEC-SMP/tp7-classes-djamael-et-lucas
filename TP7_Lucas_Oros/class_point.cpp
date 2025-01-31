@@ -49,3 +49,9 @@ void point::translater(const point &p) {
 void point::afficher() {
     cout << "x = " << get_x() << " y = " << get_y() << endl;
 }
+
+// Surcharge de l'opérateur pour operation += pour simplifier l’écriture de la translation d’un point (interne a la classe)
+void point::operator+=(point &p) {
+    this->translater(p);
+}
+
