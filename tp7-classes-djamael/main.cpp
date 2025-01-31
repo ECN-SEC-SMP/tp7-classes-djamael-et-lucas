@@ -6,6 +6,7 @@ But : Fichier principale permettant d'instancier et de tester nos classes
 *********************************************/
 #include <iostream>
 #include "Point.h"
+#include "Forme.h"
 
 void afficherPoint(Point &exp)
 {
@@ -19,6 +20,13 @@ ostream& operator<<(ostream&s,Point const&c)
     s << "("<< c.GetX() <<" ;" << c.GetY()<<")";
     return s;
 }
+
+ostream& operator<<(ostream&s,Forme const&f)
+{
+    s << "Centre :"<< f.getCentre();
+    return s;
+}
+
 Point operator+(Point& p1, Point& p2)
 {
     Point p3;
