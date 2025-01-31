@@ -43,6 +43,9 @@ public:
     //methode qui affiche les coordonnees du point
     void afficher();
 
+    //surcharge de l'operateur +=
+    void operator+=(point &p);
+
 };
 
 
