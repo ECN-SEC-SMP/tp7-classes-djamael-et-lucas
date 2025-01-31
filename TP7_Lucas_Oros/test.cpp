@@ -8,6 +8,7 @@
 #include <map>
 #include <sstream>
 #include "class_point.h"
+#include "class_forme.h"
 
 using namespace std;
 
@@ -50,4 +51,31 @@ void partie2(void){
 
     p1 += p2;
     cout << "Point 1 apres translation : " << p1 << endl;
+};
+
+void partie3(void){
+    forme f1(point(1, 2));
+    forme f2(point(3, 4));
+    forme f3(f1);
+
+    point p(5, 5);
+    f2.forme_set(p); // remplace f2
+    
+
+    cout << f1 << endl;
+    cout << f2 << endl;
+    cout << f3 << endl;
+
+    f1 += p;
+    f3 += p;
+
+    //cout
+    cout << f1 << endl;
+    cout << f2 << endl;
+    cout << f3 << endl;
+
+    
+
+    //test get le centre de la forme f1
+    //cout << "Centre de la forme f1 : " << f1.forme_get(f1, 1) << ", " << f1.forme_get(f1, 0) << endl;
 };
