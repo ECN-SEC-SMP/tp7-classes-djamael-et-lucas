@@ -20,7 +20,7 @@ Point::Point(int _x, int _y)
     this->x = _x;
     this->y = _y;
 }
-Point::Point(const Point& other):x(other.x),y(other.x)
+Point::Point(const Point& other):x(other.x),y(other.y)
 {
 }
 int Point::GetX() const
@@ -30,7 +30,7 @@ int Point::GetX() const
 
 int Point::GetY() const
 {
-    return this->x;
+    return this->y;
 }
 
 void Point::SetX(int _x)
@@ -45,5 +45,15 @@ void Point::SetY(int _y)
 void Point::translater(int dx, int dy)
 {
     this->x+=dx;
-    this->y+=dx;
+    this->y+=dy;
+}
+void Point::translater(const Point& other)
+{
+    this->x+=other.x;
+    this->y+=other.y;
+}
+
+void Point::operator+=(Point const&p1)
+{
+    this->translater(p1);
 }

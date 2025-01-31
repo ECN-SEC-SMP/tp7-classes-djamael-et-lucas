@@ -19,4 +19,6 @@ public :
     void SetX(int _x);
     void SetY(int _y);
     void translater(int dx, int dy);
+    void translater(const Point& other);
+    void operator+=(Point const&p1);
 };
