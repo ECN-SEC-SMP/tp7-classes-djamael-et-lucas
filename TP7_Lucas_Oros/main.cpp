@@ -26,7 +26,12 @@ using namespace std;
 int main(){
 
     //partie1();
-    partie2();
+    //partie2();
+    //partie3();
+    //partie4_cercle();
+    //partie4_rectangle();
+    //partie4_carre();
+    partie5();
 
 }
 
