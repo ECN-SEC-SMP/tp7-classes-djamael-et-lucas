@@ -12,8 +12,10 @@
 #include "class_cercle.h"
 #include "class_rectangle.h"
 #include "class_carre.h"
+#include "class_ListeFormes.h"
 
 using namespace std;
+
 
 
 // Surcharge de l'opérateur pour cout (externe a la classe)
@@ -110,5 +112,38 @@ void partie4_carre(void){
     //calculer le perimetre et la surface du carré
     cout << "Perimetre du carre 1 : " << c1.forme_perimetre() << endl;
     cout << "Surface du carre 1 : " << c1.forme_surface() << endl;
+}
+
+void partie5(void){
+    ListeFormes liste;
+
+    //création de 3 formes
+    point p1(1, 0);
+    cercle* c1 = new cercle(p1, 5); // Cercle avec rayon 5
+
+    point p2(3, 3);
+    rectangle* r1 = new rectangle(p2, 6, 4); // Rectangle avec largeur 6 et hauteur 4
+
+    point p3(7, 1);
+    carre* ca1 = new carre(p3, 3); // Carré avec côté 3
+
+    // Ajout des formes dans la liste
+    liste.ajouter_forme(c1);
+    liste.ajouter_forme(r1);
+    liste.ajouter_forme(ca1);
+
+    // Affichage des formes
+    cout << "Formes dans la liste:" << endl;
+    liste.afficher_formes();
+
+    // Calcul de la surface totale
+    cout << "Surface totale : " << liste.surface_totale() << endl;
+    //resultat attendu : 5*5*3.1415 + 6*4 + 3*3 = 78.53975 + 24 + 9 = 111.53975 (resultat obtenu ok)
+
+    // Calcul de la boîte englobante
+    int x_min, x_max, y_min, y_max;
+    liste.calcul_boite_englobante(x_min, x_max, y_min, y_max);
+    cout << "Boite englobante : (" << x_min << ", " << x_max << ", " << y_min << ", " << y_max << ")" << endl;
+    //resultat attendu : (1, 7, 0, 3) (resultat obtenu ok)
 }
 
