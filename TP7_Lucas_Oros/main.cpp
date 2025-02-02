@@ -22,13 +22,14 @@ using namespace std;
 
 
 
-    
+
 int main(){
 
     //partie1();
     //partie2();
     //partie3();
-    partie4_cercle();
+    //partie4_cercle();
+    partie4_rectangle();
 
 }
 
