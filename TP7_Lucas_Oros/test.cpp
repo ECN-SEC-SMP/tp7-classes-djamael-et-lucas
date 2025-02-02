@@ -9,6 +9,7 @@
 #include <sstream>
 #include "class_point.h"
 #include "class_forme.h"
+#include "class_cercle.h"
 
 using namespace std;
 
@@ -54,28 +55,23 @@ void partie2(void){
 };
 
 void partie3(void){
-    forme f1(point(1, 2));
-    forme f2(point(3, 4));
-    forme f3(f1);
-
-    point p(5, 5);
-    f2.forme_set(p); // remplace f2
-    
-
-    cout << f1 << endl;
-    cout << f2 << endl;
-    cout << f3 << endl;
-
-    f1 += p;
-    f3 += p;
-
-    //cout
-    cout << f1 << endl;
-    cout << f2 << endl;
-    cout << f3 << endl;
-
-    
-
-    //test get le centre de la forme f1
-    //cout << "Centre de la forme f1 : " << f1.forme_get(f1, 1) << ", " << f1.forme_get(f1, 0) << endl;
+    //pas de test car classe abstraite
 };
+
+void partie4_cercle(void){
+    //création d'un cercle
+    cercle c1(point(1, 2), 3); //centre (1, 2) et rayon 3
+    cercle c2(point(3, 4), 5); //centre (3, 4) et rayon 5
+    point p(3, 6);
+
+    //translater le cercle c2 avec le point p(3, 6)
+    c2 += p; // donc le centre de c2 devient (6, 10)
+
+    cout << "Cercle 1 : " << c1 << endl;
+    cout << "Cercle 2 : " << c2 << endl;
+
+    
+    //calculer le perimetre et la surface du cercle
+    cout << "Perimetre du cercle 1 : " << c1.forme_perimetre() << endl;
+    cout << "Surface du cercle 1 : " << c1.forme_surface() << endl;
+}
