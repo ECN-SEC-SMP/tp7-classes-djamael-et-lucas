@@ -22,7 +22,7 @@ public:
     forme(point p);
     
     //accesseurs
-    int forme_get(forme f, bool x); //const dire que les attributs ne sont pas modifies
+    int forme_get(bool x) const; //const dire que les attributs ne sont pas modifies
     
     //mutateurs
     void forme_set(point p);
@@ -37,10 +37,10 @@ public:
     friend ostream& operator<<(ostream &out, forme &f);
 
     //fonction abstraite perimetre
-    virtual int forme_perimetre(); //const = 0;
+    virtual int forme_perimetre() const = 0; //const dire que les attributs ne sont pas modifies
 
     //fonction abstraite surface
-    virtual int forme_surface(); //const = 0;
+    virtual int forme_surface() const = 0; //const dire que les attributs ne sont pas modifies
 
 };
 

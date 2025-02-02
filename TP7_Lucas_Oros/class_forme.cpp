@@ -10,12 +10,12 @@ forme::forme() : centre(0, 0) {}
 // Constructeur avec paramètres
 forme::forme(point p) : centre(p) {}
 
-// Getters forme_get qui reourne les coordonnées du point
-int forme::forme_get(forme f, bool x) {
+// Getters forme_get qui retourne les coordonnées du point
+int forme::forme_get(bool x) const {
     if (x) {
-        return f.centre.get_x();
+        return this->centre.get_x();
     } else {
-        return f.centre.get_y();
+        return this->centre.get_y();
     }
 }
 
@@ -26,7 +26,7 @@ void forme::forme_set(point p) {
 
 // Affichage des coordonnées avec get_forme
 void forme::afficher() {
-    cout << "Centre : (" << forme_get(centre, 1) << ", " << forme_get(centre, 0) << ")" << endl;
+    cout << "Centre : (" << forme_get(1) << ", " << forme_get(0) << ")" << endl;
 }
 
 
@@ -37,7 +37,7 @@ void forme::operator+=(point &p) {
 
 //Surcharger l’opérateur « de façon à permettre l’utilisation de cout avec des Formes
 ostream& operator<<(ostream &out, forme &f) {
-    out << "Centre : (" << f.forme_get(f, 1) << ", " << f.forme_get(f, 0) << ")";
+    out << "Centre : (" << f.forme_get(1) << ", " << f.forme_get(0) << ")";
     return out;
 }
 
