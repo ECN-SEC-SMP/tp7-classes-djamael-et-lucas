@@ -11,6 +11,7 @@
 #include "class_forme.h"
 #include "class_cercle.h"
 #include "class_rectangle.h"
+#include "class_carre.h"
 
 using namespace std;
 
@@ -92,4 +93,22 @@ void partie4_rectangle(void){
     //calculer le perimetre et la surface du rectangle
     cout << "Perimetre du rectangle 1 : " << r1.forme_perimetre() << endl;
     cout << "Surface du rectangle 1 : " << r1.forme_surface() << endl;
-    }
+}
+
+void partie4_carre(void){
+    //création 2 carrés
+    carre c1(point(5, 6), 10); //centre (5, 6) et cote 10
+    carre c2(point(3, 4), 7); //centre (3, 4) et cote 7
+    point p(3, 6);
+
+    //translater le carré c2 avec le point p(3, 6)
+    c2 += p; // donc le centre de c2 devient (6, 10)
+
+    cout << "Carre 1 : " << c1 << endl;
+    cout << "Carre 2 : " << c2 << endl;
+
+    //calculer le perimetre et la surface du carré
+    cout << "Perimetre du carre 1 : " << c1.forme_perimetre() << endl;
+    cout << "Surface du carre 1 : " << c1.forme_surface() << endl;
+}
+
