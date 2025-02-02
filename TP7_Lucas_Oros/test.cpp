@@ -10,6 +10,7 @@
 #include "class_point.h"
 #include "class_forme.h"
 #include "class_cercle.h"
+#include "class_rectangle.h"
 
 using namespace std;
 
@@ -59,7 +60,7 @@ void partie3(void){
 };
 
 void partie4_cercle(void){
-    //création d'un cercle
+    //création 2 cercles
     cercle c1(point(1, 2), 3); //centre (1, 2) et rayon 3
     cercle c2(point(3, 4), 5); //centre (3, 4) et rayon 5
     point p(3, 6);
@@ -75,3 +76,20 @@ void partie4_cercle(void){
     cout << "Perimetre du cercle 1 : " << c1.forme_perimetre() << endl;
     cout << "Surface du cercle 1 : " << c1.forme_surface() << endl;
 }
+
+void partie4_rectangle(void){
+    //création 2 rectangles
+    rectangle r1(point(1, 2), 3, 4); //centre (1, 2) et largeur 3 et hauteur 4
+    rectangle r2(point(3, 4), 5, 6); //centre (3, 4) et largeur 5 et hauteur 6
+    point p(3, 6);
+
+    //translater le rectangle r2 avec le point p(3, 6)
+    r2 += p; // donc le centre de r2 devient (6, 10)
+
+    cout << "Rectangle 1 : " << r1 << endl;
+    cout << "Rectangle 2 : " << r2 << endl;
+
+    //calculer le perimetre et la surface du rectangle
+    cout << "Perimetre du rectangle 1 : " << r1.forme_perimetre() << endl;
+    cout << "Surface du rectangle 1 : " << r1.forme_surface() << endl;
+    }
