@@ -22,9 +22,9 @@ int cercle::forme_surface() const{
 }
 
 //surcharge de l'opérateur << pour afficher les attributs de la classe cercle
+// type -> centre -> rayon
 ostream& operator<<(ostream &out, const cercle &c) {
-    out << "Type : " << c.type << " -> Centre : (" << c.forme_get(1) << ", " << c.forme_get(0) << "), Rayon : " 
-        << c.forme_perimetre() / (2 * 3.1415);
+    out << "Type : " << c.type << " -> Centre : (" << c.forme_get(1) << ", " << c.forme_get(0) << "), Rayon : " << c.rayon;
     return out;
 }
 
