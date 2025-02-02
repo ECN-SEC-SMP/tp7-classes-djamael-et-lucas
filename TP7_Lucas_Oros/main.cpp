@@ -29,7 +29,8 @@ int main(){
     //partie2();
     //partie3();
     //partie4_cercle();
-    partie4_rectangle();
+    //partie4_rectangle();
+    partie4_carre();
 
 }
 
