@@ -31,9 +31,9 @@ public:
     point(const point &p);
     
     //accesseurs
-    int get_x();
+    int get_x() const; // const dire que les attributs ne sont pas modifies
 
-    int get_y();
+    int get_y() const; // const dire que les attributs ne sont pas modifies
     
     //mutateurs
     void set_x(int x);
@@ -45,7 +45,6 @@ public:
 
     //surcharge de l'operateur +=
     void operator+=(point &p);
-
 };
 
 

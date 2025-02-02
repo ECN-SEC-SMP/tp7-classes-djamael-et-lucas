@@ -16,12 +16,12 @@ point::point(int x, int y) : x(x), y(y) {}
 point::point(const point &p) : x(p.x), y(p.y) {}
 
 // Getters
-int point::get_x() {
-    return x;
+int point::get_x() const{
+    return this->x;
 }
 
-int point::get_y() {
-    return y;
+int point::get_y() const {
+    return this->y;
 }
 
 // Setters
