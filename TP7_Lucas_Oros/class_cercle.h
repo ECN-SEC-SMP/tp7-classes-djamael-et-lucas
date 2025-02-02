@@ -29,6 +29,8 @@ public:
     //fonction abstraite surface
     int forme_surface() const override; // const pour ne pas modifier les attributs de la classe - override pour redéfinir la fonction de la classe mère
 
+    friend ostream& operator<<(ostream &out, const cercle &c); //surcharge de l'opérateur << pour afficher les attributs de la classe cercle
+
 };
 
 
