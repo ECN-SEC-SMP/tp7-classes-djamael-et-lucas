@@ -32,6 +32,5 @@ int main(){
     //partie4_rectangle();
     //partie4_carre();
     partie5();
-
 }
 
