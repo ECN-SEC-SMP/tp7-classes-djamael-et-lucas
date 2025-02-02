@@ -10,6 +10,7 @@ But : Fichier principale permettant d'instancier et de tester nos classes
 #include "Cercle.h"
 #include "Rectangle.h"
 #include "Carre.h"
+#include "ListeFormes.h"
 
 int main()
 {
@@ -59,26 +60,26 @@ int main()
     cout<<"Perimetre du rectangle: "<< rectangle.perimetre()<<"; Surface du rectangle: "<<rectangle.surface()<<endl;
 
     //  ----------------[ Classe Liste Formes ]-------------------
-    // ListeFormes liste;
+    ListeFormes liste;
 
-    // Rectangle* r1 = new Rectangle(p1, 3, 4);
-    // liste.ajouterForme(r1);
-    // Cercle* c1 = new Cercle(p2, 2);
-    // liste.ajouterForme(c1);
-    // Carre* k1 = new Carre(p2, 2);
-    // liste.ajouterForme(k1);
+    Rectangle* r1 = new Rectangle(p1, 3, 4);
+    liste.ajouterForme(r1);
+    Cercle* c1 = new Cercle(p2, 2);
+    liste.ajouterForme(c1);
+    Carre* k1 = new Carre(p2, 2);
+    liste.ajouterForme(k1);
 
-    // cout << "Liste des formes :" << endl;
-    // for (size_t i = 0; i < liste.taille(); i++)
-    // {
-    //     liste.getForme(i)->afficher();
-    // }
-    // cout << "Surface totale : " << liste.surfaceTotale() << endl;
+    cout << "Liste des formes :" << endl;
+    for (size_t i = 0; i < liste.taille(); i++)
+    {
+        liste.getForme(i)->afficher();
+    }
+    cout << "Surface totale : " << liste.surfaceTotale() << endl;
 
-    // Rectangle* boite = liste.boiteEnglobante();
-    // cout << "Boîte englobante : " << *boite << endl;
+    Rectangle* boite = liste.boiteEnglobante();
+    cout << "Boîte englobante : " << *boite << endl;
 
-    // // N'oublie pas de nettoyer la mémoire
-    // delete boite;
+    // N'oublie pas de nettoyer la mémoire
+    delete boite;
 
 }
