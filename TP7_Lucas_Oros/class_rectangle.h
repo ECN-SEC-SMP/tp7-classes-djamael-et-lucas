@@ -24,6 +24,10 @@ public:
     // Constructeur avec paramètres 
     rectangle(point p, int l, int h);
 
+    // Accesseurs pour largeur et hauteur
+    int get_largeur() const;
+    int get_hauteur() const;
+
     //fonction abstraite perimetre
     int forme_perimetre() const override; // const pour ne pas modifier les attributs de la classe - override pour redéfinir la fonction de la classe mère
 
