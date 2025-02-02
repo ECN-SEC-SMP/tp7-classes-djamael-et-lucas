@@ -11,6 +11,15 @@ rectangle::rectangle() : forme(), largeur(0), hauteur(0) {}
 // Constructeur
 rectangle::rectangle(point p, int l, int h) : forme(p), largeur(l), hauteur(h) {}
 
+// Accesseurs pour largeur et hauteur
+int rectangle::get_largeur() const{
+    return this->largeur;
+}
+
+int rectangle::get_hauteur() const {
+    return this->hauteur;
+}
+
 //fonction perimetre
 int rectangle::forme_perimetre() const {
     return 2*(this->largeur + this->hauteur);
@@ -25,7 +34,7 @@ int rectangle::forme_surface() const{
 // type -> centre -> rayon
 ostream& operator<<(ostream &out, const rectangle &c) {
     out << "Type : " << c.type << " -> Centre : (" << c.forme_get(1) << ", " << c.forme_get(0) << "), Largeur : " 
-        << c.largeur << ", Hauteur : " << c.hauteur;
+        << c.get_largeur() << ", Hauteur : " << c.get_hauteur();
     return out;
 }
 
