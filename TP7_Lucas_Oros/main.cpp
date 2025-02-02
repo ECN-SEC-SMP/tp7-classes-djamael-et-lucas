@@ -30,7 +30,8 @@ int main(){
     //partie3();
     //partie4_cercle();
     //partie4_rectangle();
-    partie4_carre();
+    //partie4_carre();
+    partie5();
 
 }
 
